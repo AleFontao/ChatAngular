@@ -1,0 +1,24 @@
+<div class="container-login">
+  <mat-grid-list class="center" cols="1" rowHeight="90px">
+    <mat-grid-tile colspan="1" rowspan="1">
+      <mat-form-field appearance="outline">
+        <mat-label>Mail</mat-label>
+        <input type="text" id="mail" matInput placeholder="alefontao@hotmail.com">
+      </mat-form-field>
+
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" id="password" matInput placeholder="*****">
+      </mat-form-field>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list class="center" [cols]="1" rowHeight="100px">
+    <mat-grid-tile colspan="1" rowspan="1">
+      <button style="background-color: #262626; color: #ffff" mat-raised-button (click)="loginIn()">Iniciar
+        Sesión</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

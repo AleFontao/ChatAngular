@@ -1,0 +1,50 @@
+
+
+.container-login{
+    width: 25%;
+    height: 350px;
+    border-radius: 25px;
+    background-color: rgb(235, 235, 235);
+}
+.container-user .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: left;
+    left: 4%;
+}
+
+
+
+.button {
+    height: 45px;
+    margin: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+mat-form-field {
+    width: 65%;
+}
+  
+
+
+@media(max-width: 750px) {
+    .container-user {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    input {
+        width: 100% !important;        
+    }
+
+
+}
