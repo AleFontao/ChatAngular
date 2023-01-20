@@ -29,6 +29,7 @@ import { MainComponent } from './components/main/main.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     MatDatepickerModule,
     MatOptionModule,
     MatSnackBarModule,
+    ReactiveFormsModule ,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())
   ],

@@ -1,3 +1,41 @@
-<p>
-  register works!
-</p>
+<div class="container">
+  <div class="container-register">
+    <h2>Registro</h2>
+    <form [formGroup]="formReg">
+      <mat-grid-list class="center" cols="1" rowHeight="90px">
+        <mat-grid-tile colspan="1" rowspan="1">
+          <mat-form-field appearance="outline">
+            <mat-label>Mail</mat-label>
+            <input formControlName="email" type="text" id="email" matInput placeholder="alefontao@hotmail.com">
+            <mat-error *ngIf="formReg.get('email')?.touched && formReg.get('email')?.errors?.['required']">
+              Mail es <strong>requerido</strong>
+            </mat-error>
+            <mat-error *ngIf="formReg.get('email')?.touched">
+              Ingresa un mail valido.
+            </mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input formControlName="password" type="password" id="password" matInput placeholder="*****">
+            <mat-error *ngIf="formReg.get('password')?.touched && formReg.get('password')?.errors?.['required']">
+              Contrasenia es <strong>requerido</strong>
+            </mat-error>
+            <mat-error *ngIf="formReg.get('password')?.touched">
+              Ingresa un contrasenia valida(min. 6 caracteres)
+            </mat-error>
+          </mat-form-field>
+
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+    <mat-grid-list class="center" [cols]="1" rowHeight="100px">
+      <mat-grid-tile colspan="1" rowspan="1">
+        <button style="background-color: #262626; color: #ffff" mat-raised-button
+          (click)="register()">Registrarse</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
